@@ -1,0 +1,20 @@
+html
+    head
+        link(rel="stylesheet" href="../css/auth.css")
+        title Авторизация
+    body
+        #container
+            header
+                h1 MineMap - create your own map
+            article.main
+                form.form(action="./registration" method="post")
+                    h2 Регистрация
+                    input.auth-input#name(type="text", name="auth-email", placeholder="Имя пользователя")
+                    input.auth-input#email(type="text", name="auth-login", placeholder="Почта")
+                    input.auth-input#password(type="password", name="auth-password", placeholder="Пароль")
+                    input.auth-input#remember-password(type="password", name="auth-remember-password", placeholder="Повторите пароль")
+                    input.auth-button#auth-submit(type="submit", name = "authorization", value = "Вход")
+                    button.auth-button#switch Авторизация
+            footer
+        script(src="../dist/bundle.js")
+        script(src="../js/reg.js")

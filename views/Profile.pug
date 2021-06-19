@@ -1,0 +1,41 @@
+html
+    head
+        link(rel="stylesheet" href="../css/Profile.css")
+        title Профиль
+    body
+        header
+            h1 MineMap - create your own map
+        article.main
+            div(class="profile-card")
+                div(class="profile-card-header")
+                    div(class="avatar")
+                    h2(class="nickname") Name
+                div(class="profile-card-footer")
+                    div(class="profile-card-change")
+                        div(class="repair")
+                            label Сменить ник
+                                input(type="text" id="login")
+                        div(class="repair")
+                            label Сменить пароль
+                                input(type="password" id="password")
+                        div(class="repair")        
+                            label Подтвердить пароль
+                                input(type="password" id="accept-password")
+                        div(class="save")
+                            input(type="submit", value="Сохранить") 
+                    div(class="profile-card-projects")
+                        div(class="footer-profile-projects")
+                            div(class="project-image")
+                            div(class="description")
+                                p(class="project-name") Name_Name
+                                p(class="project-description") Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat animi cumque illum repudiandae ratione laborum dignissimos perspiciatis repellendus sed.
+                                p(class="data") 01.08.2020
+                        div(class="footer-profile-projects")
+                            div(class="project-image")
+                            div(class="description")
+                                p(class="project-name") Name_Name2
+                                p(class="project-description") Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat animi cumque illum repudiandae ratione laborum dignissimos perspiciatis repellendus sed.
+                                p(class="data") 01.08.2036
+        footer
+        script(src="../dist/bundle.js")
+        script(src="../js/Profile.js")

@@ -1,0 +1,98 @@
+$main-color: green;
+@font-face {
+    font-family: RubikOne; /* Имя шрифта */
+    src: url(../fonts/RubikOne.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face{
+    font-family: Roboto Regular;
+    src : url(../fonts/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family: Roboto Bold;
+    src : url(../fonts/Roboto-Bold.ttf);
+}
+body, html{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../img/background2.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    background-image: url("../img/header2.png");
+    background-size: cover;
+    
+}
+header h1{
+    text-align: center;
+    color: white;
+    font-family: RubikOne;
+    font-weight: 300;
+    line-height: 45px;
+    text-shadow: 4px 4px 0 rgb(0, 0, 0);
+}
+article{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.card:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+.card{
+    cursor: pointer;
+    transition: 0.5s;
+    height: 400px;
+    width: 350px;
+    background-color: #4d4d4d63;
+}
+.card>.card-header{
+    height: 200px;
+    width: 100%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card>.card-footer{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    color: white;
+}
+.card>.card-footer>.card-footer-h{
+    height: 50px;
+    line-height: 50px;
+    margin:0;
+    font-size: 30px;
+    text-align: center;
+    font-family: Roboto Bold;
+    background-color: #333333;
+}
+.card>.card-footer>.card-footer-info{
+    height: 150px;
+    padding: 50px;
+}
+.card>.card-footer>.card-footer-info>p{
+    font-size: 18px;
+    margin: 0;
+    font-family: Roboto Regular;
+    word-wrap: break-word;
+    text-align: center;
+}
+#profile{
+    background-image: url("../img/profile.png");
+}
+#my-projects{
+    background-image: url("../img/my-projects.png");;
+}
+#projects{
+    background-image: url("../img/projects.png");
+}

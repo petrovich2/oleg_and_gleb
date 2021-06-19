@@ -1,0 +1,28 @@
+html
+    head
+        link(rel="stylesheet" href="../css/MainPage.css")
+        title Главная
+    body
+        header
+            h1 MineMap - create your own map
+        article.main
+            div(class="card")
+                div(class="card-header" id="profile")
+                div(class="card-footer")
+                    h4(class="card-footer-h") Профиль
+                    div(class="card-footer-info")
+                        p Отредактировать профиль и изменить аватар
+            div(class="card")
+                div(class="card-header" id="my-projects")
+                div(class="card-footer")
+                    h4(class="card-footer-h") Мои проекты
+                    div(class="card-footer-info")
+                        p Твори и создавай
+            div(class="card")
+                div(class="card-header" id="projects")
+                div(class="card-footer")
+                    h4(class="card-footer-h") Проекты
+                    div(class="card-footer-info")
+                        p Здесь находятся работы других людей
+        script(src="../dist/bundle.js")
+        script(src="../js/MainPage.js")

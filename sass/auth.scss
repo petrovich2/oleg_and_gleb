@@ -1,0 +1,108 @@
+@font-face {
+    font-family: RubikOne; /* Имя шрифта */
+    src: url(../fonts/RubikOne.ttf); /* Путь к файлу со шрифтом */
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/background2.png");
+    background-size: cover;
+    #container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        header{
+            width: 100%;
+            font-family: RubikOne;
+            color: white;
+            text-align: center;
+            background-image: url("../img/header2.png");
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 4px 4px 0 rgb(0, 0, 0);
+            font-weight: 400;
+            font-size: 20px;
+        }
+        .main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .form{
+                width: 630px;
+                height: 550px;
+                background-image: url("../img/form.png");
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                h2{
+                    font-family: RubikOne;
+                    font-weight: normal;
+                    font-size: 50px;
+                    margin: 0;
+                    color: white;
+                    text-shadow: 4px 4px 0 rgb(0, 0, 0);
+                }
+                .auth-input{
+                    width: 400px;
+                    height: 40px;
+                    background-image: url("../img/input.png");
+                    background-size: cover;
+                    border: 2px solid white;
+                    outline: none;
+                    color: white;
+                    font-size: 20px;
+                    font-family: RubikOne;
+                    padding-left: 20px;
+                    &.error{
+                        border-color: #ff4848;
+                    }
+                }
+                .auth-button{
+                    &#auth-submit{
+                        width: 250px;
+                        height: 50px;
+                        background-image: url("../img/submit.png");
+                        color: white;
+                        font-size: 25px;
+                        border-bottom: 5px solid #060058;
+                        &.disabled{
+                            filter : grayscale(100%);
+                        }
+                        &:active{
+                            border-bottom: none;
+                            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5) inset;
+                        }
+                    }
+                    &#switch{
+                        width: 150px;
+                        height: 30px;
+                        background-image: url("../img/switch.jpg");
+                        color: black;
+                        font-size: 15px;
+                        border-bottom: 5px solid #2f2f2f;
+                        background-size: cover;
+                        &:active{
+                            border-bottom: none;
+                            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5) inset;
+                        }
+                    }
+                    font-family: RubikOne;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        footer{
+            width: 100%;
+            background-image: url("../img/header2.png");
+            height: 75px;
+        }
+    }
+}
