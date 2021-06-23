@@ -18,7 +18,6 @@ html, body{
             font-family: RubikOne;
             color: white;
             text-align: center;
-            
             height: 75px;
             display: flex;
             align-items: center;
@@ -27,12 +26,12 @@ html, body{
             font-weight: 400;
             font-size: 20px;
         }
-        article.main{
+        .main{
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            form.form{
+            .form{
                 width: 630px;
                 height: 550px;
                 background-image: url("../img/form.png");
@@ -48,14 +47,14 @@ html, body{
                     color: white;
                     text-shadow: 4px 4px 0 rgb(0, 0, 0);
                 }
-                input.auth-login{
+                .auth-input{
                     width: 400px;
                     height: 40px;
                     background-image: url("../img/input.png");
                     background-size: cover;
                     border: 2px solid white;
                     outline: none;
-                    // color: white;
+                    color: white;
                     font-size: 20px;
                     font-family: RubikOne;
                     padding-left: 20px;
@@ -79,7 +78,23 @@ html, body{
                             box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5) inset;
                         }
                     }
-                  
+                    &#switch{
+                        width: 150px;
+                        height: 30px;
+                        background-image: url("../img/switch.jpg");
+                        color: black;
+                        font-size: 15px;
+                        border-bottom: 5px solid #2f2f2f;
+                        background-size: cover;
+                        &:active{
+                            border-bottom: none;
+                            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5) inset;
+                        }
+                    }
+                    font-family: RubikOne;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
                 }
             }
         }

@@ -3,16 +3,17 @@ html
         link(rel="stylesheet" href="../css/auth.css")
         title Авторизация
     body
-        header
-            h1 MineMap - create your own map
-        article.main
-            form.form(action="./authorization" method="post")
-                h2 Авторизация
-                input#auth-login(type="text", name="auth-login", placeholder="Логин")
-                div(id="strue")
-                div(id="false")
-                input#auth-password(type="password", name="auth-password", placeholder="Пароль")  
-                input#auth-submit(type="submit", name = "authorization", value = "Вход")
-        footer
-        script(src="../dist/bundle.js")
-        script(src="../js/auth.js")
+        #container
+            header
+                h1 MineMap - create your own map
+            article.main
+                form.form(action="./authorization" method="post")
+                    h2 Авторизация
+                    input(type="text", id = "log", name="auth-login", placeholder="Логин")
+                    div(id="strue")
+                    div(id="false")
+                    input#auth-password(type="password", name="auth-password", placeholder="Пароль")  
+                    input#auth-submit(type="submit", name = "authorization", value = "Вход")
+            footer
+            script(src="../dist/bundle.js")
+            script(src="../js/auth.js")

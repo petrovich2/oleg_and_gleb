@@ -17,7 +17,7 @@ body, html{
 }
 
 body{
-    background-image: url("../img/background2.png");
+    background-image: url("../img/bg.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -25,11 +25,11 @@ body{
     justify-content: space-between;
 }
 
-header{
-    background-image: url("../img/header2.png");
-    background-size: cover;
+// header{
+//     background-image: url("../img/header2.png");
+//     background-size: cover;
     
-}
+// }
 header h1{
     text-align: center;
     color: white;
@@ -42,24 +42,28 @@ article{
     display: flex;
     justify-content: space-around;
 }
-footer{
-    height: 45px;
-    background-image: url("../img/footer2.png");
-    background-size: cover;
-    margin-top: 6%;
-}
+// footer{
+//     height: 45px;
+//     background-image: url("../img/footer2.png");
+//     background-size: cover;
+//     margin-top: 6%;
+// }
+
+
 .profile-card{
     height: 720px;
     width: 1080px;
-    background-image: url("../img/profile-card.png");
+    background-color: #6a4d8b52;
+    border-radius:20px;
 }
 .profile-card-header{
     height: 260px;
     width: 1080px;
-    background-image: url("../img/profile_header.png");
+    background-color: #7a57a352;
     background-size: cover;
     text-align: center;
     padding-top: 25px;
+    border-radius: 20px 20px 0 0;
 }
 .avatar{
     cursor: pointer;
@@ -95,13 +99,15 @@ footer{
     font-family: Roboto Regular;
     color: white;
     font-size: 24px;
-    padding-top: 20px;
+    // padding-top: 20px;
+    background-color: #7a57a352;
+    border-radius: 0 0 0    20px;
 }
 .profile-card-projects{
     display: flex;
     width: 50%;
     height: 100%;
-    background-image: url("../img/profile-projects.png");
+    background-color: #7a57a352;    
     background-size: cover;
     align-items: center;
     justify-content: center;
@@ -112,19 +118,22 @@ footer{
     cursor: pointer;
     width: 422px;
     height: 217px;
-    border: 1px solid black;
+    border: 1px solid #212529;
     margin-top: 50px;
     transition: 0.5s;
+    
 }
 .footer-profile-projects:hover{
     transition: 0.5s;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    box-shadow: 0 0 30px #212529;
+    
 }
 .project-image{
     width: 100%;
     height: 55%;
     background-image: url("../img/Project-image.png");
     background-size: cover;
+    border-radius: 10px 10px 0 0;
 }
 .description{
     position: relative;
@@ -132,6 +141,7 @@ footer{
     height: 45%;
     background-color: #201D1D;
     text-align: center;
+    border-radius: 0 0 10px 10px;
 }
 
 .project-name{
@@ -166,10 +176,10 @@ input{
     display: block;
     width: 321px;
     height: 43px;
-    border-radius: 3px;
+    border-radius: 10px;
     outline: none;
     border: 2px solid black;
-    background-color: #00000085;
+    background-color: #fd6950;
     font-size: 18px;
     color: white;
 }

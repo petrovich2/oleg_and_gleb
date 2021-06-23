@@ -17,7 +17,7 @@ body, html{
 }
 
 body{
-    background-image: url("../img/background2.png");
+    background-image: url("../img/bg.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -25,11 +25,11 @@ body{
     justify-content: space-between;
 }
 
-header{
-    background-image: url("../img/header2.png");
-    background-size: cover;
+// header{
+//     background-image: url("../img/header2.png");
+//     background-size: cover;
     
-}
+// }
 header h1{
     text-align: center;
     color: white;

@@ -19,7 +19,7 @@ body, html{
 body{
     // background: rgb(52,1,115);
     // background: linear-gradient(198deg, rgba(52,1,115,1) 0%, rgba(55,35,103,1) 35%, rgba(77,45,92,1) 47%, rgba(131,31,81,1) 74%);
-    background-image: url("../img/background2.png");
+    background-image: url("../img/bg.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -27,11 +27,11 @@ body{
     justify-content: space-between;
 }
 
-header{
-    background-image: url("../img/header2.png");
-    background-size: cover;
+// header{
+//     background-image: url("../img/header2.png");
+//     background-size: cover;
     
-}
+// }
 header h1{
     text-align: center;
     color: white;
@@ -63,10 +63,12 @@ header h1{
     margin-left: 18px;
     margin-top: 100px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .profile-button:hover{
     transition: 0.3s;
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    cursor: pointer;
 }
 .projects-button{
     height: 65px;
@@ -77,6 +79,7 @@ header h1{
     margin-left: 18px;
     margin-top: 105px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .projects-button:hover{
     transition: 0.3s;
@@ -91,6 +94,7 @@ header h1{
     margin-left: 18px;
     margin-top: 300px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .exit-button:hover{
     transition: 0.3s;
@@ -115,10 +119,12 @@ article.main{
     flex-direction: row;
     align-items: flex-end;
     transition: 0.3s;
+    cursor: pointer;
 }
 .project-box:hover{
     transition: 0.3s;
     box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    cursor: pointer;
 }
 .rating{
     display: flex;
