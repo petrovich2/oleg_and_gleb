@@ -106,6 +106,7 @@ class userModel{
                 if(password === dbPassword){
                     let name = self.decrypt(result.Name, token);
                     let user = {
+                        id : result.Id,
                         name,
                         status : result.Status,
                         email : login

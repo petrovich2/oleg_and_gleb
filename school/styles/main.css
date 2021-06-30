@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.addLayout{
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+.addLayout input{
+    border: 2px solid #334ca0;
+    border-radius: 5px;
+    width: 300px;
+    height: 25px;
+    padding: 5px;
+    display: inline-block;
+    outline: none;
+}
+.addLayout .addMap{
+    cursor: pointer;
+    border: 2px solid #334ca0;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: #334ca0;
+    font-weight: 600;
+}
+table{
+    color: #333333;
+    width: 100%;
+    border-width: 1px;
+    border-color: #729ea5;
+    border-collapse: collapse;
+    max-width: 1150px;
+    text-align: center;
+    margin: auto auto;
+    font-size: 14pt;
+    table-layout: fixed;
+}
+th{
+    background: #334ca0;
+    padding: 8px;
+    height: 65px;
+    max-width: 100%;
+    color: white;
+}
+tr{
+    border-top: 1px solid #d8d8d8;
+    background: rgba(0, 0, 0, .05);
+}
+td{
+    padding: 8px;
+    height: 65;
+    max-height: 70px;
+    word-wrap: break-word;
+}
