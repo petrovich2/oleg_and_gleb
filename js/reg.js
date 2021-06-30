@@ -8,7 +8,7 @@ $("#auth-submit").on("click", function(e){
     if(email){
         $.post("./checkLogin/", {Email : email}, function(data){
             if(data){
-                makeError("email", "Данная почта уже зарегестрирована!");
+                alert("Данная почта уже зарегистрирована!");
             }
             else{
                 if(name){
@@ -20,26 +20,26 @@ $("#auth-submit").on("click", function(e){
                             Status : 2
                         }
                         $.post("./registrate/", user, function(data){
-                            console.log(data);
+                            alert("Регистрация прошла успешно!");
                         })
                     }
                     else{
-                        makeError("remember-password", "Неправильно повторили пароль!");
+                        alert("Пароли не совпадают!")
                     }
                 }
                 else{
-                    makeError("name", "Не заполнено имя!");
+                    alert("Не заполнено поле имя!")
                 }
             }
         })
     }
 })
-function makeError(id, message){
-    $(`#${id}`).addClass("error");
-    $(`#${id}-error`).text(message);
-    $("#auth-submit").addClass("disabled");
-    $("#auth-submit").attr("disabled", true);
-}
+// function makeError(id, message){
+//     $(`#${id}`).addClass("error");
+//     $(`#${id}-error`).text(message);
+//     $("#auth-submit").addClass("disabled");
+//     $("#auth-submit").attr("disabled", true);
+// }
 
 $(".auth-input").on("focus", function(){
     $(this).removeClass("error");

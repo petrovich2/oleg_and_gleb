@@ -7,13 +7,11 @@ html
             header
                 h1 MineMap - create your own map
             article.main
-                form.form(action="./authorization" method="post")
+                form.form
                     h2 Авторизация
-                    input(type="text", id = "log", name="auth-login", placeholder="Логин")
-                    div(id="strue")
-                    div(id="false")
-                    input#auth-password(type="password", name="auth-password", placeholder="Пароль")  
-                    input#auth-submit(type="submit", name = "authorization", value = "Вход")
+                    input#auth-login(type="text" placeholder="Логин")
+                    input#auth-password(type="password" placeholder="Пароль")  
+                    input#auth-submit(type="submit" value="Вход")
             footer
             script(src="../dist/bundle.js")
             script(src="../js/auth.js")

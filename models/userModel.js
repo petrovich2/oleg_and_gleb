@@ -1,5 +1,4 @@
 const Sequelize = require("sequelize");
-const database = require("../core/Database");
 const md5 = require("md5");
 const CryptoJs = require("crypto-js");
 
@@ -54,9 +53,10 @@ class userModel{
     checkLogin(login){
         let self = this;
         let result = new Promise(function(res, rej){
+
             self.User.findOne({where: {Login: md5(login)}}).then(function(result){
                     if(result){
-                        res(true);
+                        res(result);
                     }
                     else{
                         res(false)
@@ -76,9 +76,9 @@ class userModel{
                 }
                 else{
                     let hex = self.generateHex(8);
-                    let name = self.testEncrypt(data.Name, hex);
-                    let password = self.testEncrypt(data.Password, hex);
-                    let email = self.testEncrypt(data.Email, hex);
+                    let name = self.encrypt(data.Name, hex);
+                    let password = self.encrypt(data.Password, hex);
+                    let email = self.encrypt(data.Email, hex);
                     self.User.create({
                         Login: login,//md5
                         Name: name,
@@ -99,27 +99,16 @@ class userModel{
 
     authorization(login, password){
         let self = this;
-        let isLoginExist;
-        this.checkLogin2(login).then(function(res){
-            isLoginExist = res
-            if(isLoginExist){
-                self.User.findOne({where: {Password: password, Login: login}}).then(function(password){
-                    if(password){
-                        console.log("Добро пожаловать в таверну, юный сталкер");
-                    }
-                    else{
-                        console.log("Вали с таверны");
-                    }}, function(error) {
-                        console.log(error)}
+        let result = new Promise(function(resolve, reject){
+            self.checkLogin(login).then(function(result){
+                let token = result.Hex;
+                let dbPassword = self.decrypt(result.Password, token);
+                if(password === dbPassword){
                     
-                    )
-                console.log("Логин есть");
-            }
-            else{
-                console.log("Логина нет");
-            }
-
-        });
+                }
+            })
+        })
+        return result;
     }
 
     generateHex(length){
@@ -140,38 +129,16 @@ class userModel{
         return hex;
     }
 
-    test(login){
-        //Создание
-        let name = "Олег";
-        let hash = md5(name);
-        let hashLogin = md5(login);
-        console.log(hash);
-        console.log(hashLogin);
-    }
-
-    testEncrypt(text, key){
+    encrypt(text, key){
         let encrypted = CryptoJs.AES.encrypt(text, key).toString();
         return encrypted;
     }
 
-    testDecrypt(text, key){
+    decrypt(text, key){
         let bytes = CryptoJs.AES.decrypt(text, key);
         let decrypted = bytes.toString(CryptoJs.enc.Utf8);
-        console.log(decrypted);
         return decrypted;
     }
 
 }
-
-let f = new userModel();
-
-let hex = f.generateHex(8);
-let encrypted = f.testEncrypt("Олег", hex);
-let decrypted = f.testDecrypt(encrypted, hex);
-
-console.log(`Зашифровано - ${encrypted}`);
-console.log(`Расшифровано - ${decrypted}`);
-
-// f.registrate({Login: "Oleg2", Password: "123", Email: "gg@.com", Status: 2}).then(res => console.log(res));
-// // f.authorization("Алексей", 123);
 module.exports = userModel;

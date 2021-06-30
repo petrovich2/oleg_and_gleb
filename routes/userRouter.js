@@ -5,10 +5,10 @@ const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 userRouter.use("/reg", userController.reg);
-userRouter.use("/checkLogin", urlencodedParser ,userController.checkLogin);
 userRouter.use("/auth", userController.auth);
 userRouter.use("/registrate", urlencodedParser, userController.registrate);
 userRouter.use("/authorization", urlencodedParser, userController.authorization);
+userRouter.use("/checkLogin", urlencodedParser ,userController.checkLogin);
 
 userRouter.use("/MainPage", userController.MainPage);
 userRouter.use("/Profile", userController.Profile);

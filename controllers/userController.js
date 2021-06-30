@@ -42,10 +42,7 @@ exports.Projects = function(req, res){
 }
 
 exports.authorization = function(req, res){
-    const userModel = require("../models/userModel");
-    const usermodel = new userModel();
-    let loginExists = usermodel.checkLogin(req.body.login);
-    loginExists.then(function(result){
-        res.send(result);
-    });
+    usermodel.authorization(req.body.login, req.body.password).then(result => {
+        console.log(result);
+    })
 }
