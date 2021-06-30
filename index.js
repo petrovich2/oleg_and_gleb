@@ -1,7 +1,15 @@
 const express = require("express");
+const session = require("express-session");
 const     app = express();
 
 const userRouter = require("./routes/userRouter");
+
+app.use(session({
+    secret : "super secret",
+    cookie : {maxAge : 3600000},
+    resave: true,
+    saveUninitialized : true
+}))
 
 //Статики
 app.use("/fonts", express.static(__dirname + '/fonts'));

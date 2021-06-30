@@ -104,7 +104,16 @@ class userModel{
                 let token = result.Hex;
                 let dbPassword = self.decrypt(result.Password, token);
                 if(password === dbPassword){
-                    
+                    let name = self.decrypt(result.Name, token);
+                    let user = {
+                        name,
+                        status : result.Status,
+                        email : login
+                    };
+                    resolve(user);
+                }
+                else{
+                    resolve(false);
                 }
             })
         })

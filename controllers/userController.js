@@ -1,5 +1,3 @@
-const express = require("express");
-
 const userModel = require("../models/userModel");
 const usermodel = new userModel();
 
@@ -17,7 +15,7 @@ exports.checkLogin = function(req, res){
 exports.registrate = function(req, res){
     usermodel.registrate(req.body).then(result => {
         if(result){
-            res.send("Успокойся, все хорошо");
+            res.send("Регистрация прошла успешно!");
         }
         else{
             res.send("Произошел капец...");
@@ -43,6 +41,9 @@ exports.Projects = function(req, res){
 
 exports.authorization = function(req, res){
     usermodel.authorization(req.body.login, req.body.password).then(result => {
-        console.log(result);
+        if(result){
+            req.session.user = result;
+            res.send(true);
+        }
     })
 }

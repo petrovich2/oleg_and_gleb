@@ -6,6 +6,8 @@ $("#auth-submit").on("click", function(e){
         password : $("#auth-password").val()
     };
     $.post("./authorization/", auth, function(data){
-        console.log(data);
+        if(data){
+            window.location.replace("./Projects");
+        }
     })
 });
