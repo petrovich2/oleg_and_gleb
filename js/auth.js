@@ -7,7 +7,7 @@ $("#auth-submit").on("click", function(e){
     };
     $.post("./authorization/", auth, function(data){
         if(data){
-            window.location.replace("./Projects");
+            window.location.replace("./Profile");
         }
     })
 });
