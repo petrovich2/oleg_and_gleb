@@ -35,7 +35,7 @@ html, body{
             form.form{
                 width: 630px;
                 height: 550px;
-                background-image: url("../img/form.png");
+                background-image: url(../img/form.png);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -48,28 +48,44 @@ html, body{
                     color: white;
                     text-shadow: 4px 4px 0 rgb(0, 0, 0);
                 }
-                input.auth-login{
+                #auth-login{
                     width: 400px;
                     height: 40px;
                     background-image: url("../img/input.png");
                     background-size: cover;
-                    border: 2px solid white;
+                    border: 2px solid #3296d8;
+                    border-radius: 24px;
                     outline: none;
-                    // color: white;
                     font-size: 20px;
                     font-family: RubikOne;
                     padding-left: 20px;
+                    transition: 0.25s;
+                    color: white;
                     &.error{
                         border-color: #ff4848;
                     }
                 }
-                .auth-button{
+                #auth-password{
+                    width: 400px;
+                    height: 40px;
+                    background-image: url("../img/input.png");
+                    background-size: cover;
+                    border: 2px solid #3296d8;
+                    border-radius: 24px;
+                    outline: none;
+                    color: white;
+                    font-size: 20px;
+                    font-family: RubikOne;
+                    padding-left: 20px;
+                }    
+                #auth-submit{
                     &#auth-submit{
                         width: 250px;
                         height: 50px;
-                        background-image: url("../img/submit.png");
+                        background: #a74300 ;
                         color: white;
                         font-size: 25px;
+                        border-radius: 24px;
                         border-bottom: 5px solid #060058;
                         &.disabled{
                             filter : grayscale(100%);
